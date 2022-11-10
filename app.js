@@ -5,7 +5,19 @@ const express = require("express");
 const app = express();
 
 app.get("/",function(req,res){
-    res.send("olá");
+    res.sendFile('index.html', {root:__dirname});
+});
+
+app.get("/sobre", function(req, res){
+    res.sendFile('sobre.html', {root:__dirname});
+});
+
+app.get("/FAQ", function(req, res){
+    res.sendFile('FAQ.html', {root:__dirname});
+});
+
+app.get("/fale-conosco", function(req, res){
+    res.sendFile('fale-conosco.html', {root:__dirname});
 });
 
 app.listen(3000, function(){

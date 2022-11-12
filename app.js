@@ -4,22 +4,27 @@ const express = require("express");
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
+app.use(express.urlencoded({extended: true}));
+
+
 app.get("/",function(req,res){
-    res.sendFile('index.html', {root:__dirname});
+    res.render('index');
 });
 
 app.get("/sobre", function(req, res){
-    res.sendFile('sobre.html', {root:__dirname});
+    res.render("sobre");
 });
 
 app.get("/FAQ", function(req, res){
-    res.sendFile('FAQ.html', {root:__dirname});
+    res.render("FAQ");
 });
 
 app.get("/fale-conosco", function(req, res){
-    res.sendFile('fale-conosco.html', {root:__dirname});
+    res.render("fale-conosco");
 });
 
-app.listen(3000, function(){
-    console.log("Serve iniciado na porta 3000");
-});
+app.listen(process.env.port || 3000);
+
+console.log('Running at Port 3000');

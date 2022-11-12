@@ -17,6 +17,10 @@ app.get("/sobre", function(req, res){
     res.render("sobre");
 });
 
+app.get("/cadastro", function(req, res){
+    res.render("cadastro");
+});
+
 app.get("/FAQ", function(req, res){
     res.render("FAQ");
 });

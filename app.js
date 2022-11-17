@@ -5,12 +5,21 @@ const path = require('path');
 
 const app = express();
 
+const bodyParser = require('body-parser');
+
 app.set('view engine', 'ejs');
 
 app.use(express.static("public"));
 
 app.use(express.urlencoded({extended: true}));
 
+app.use(bodyParser.urlencoded({extended:true}))
+
+
+app.get("/",function(req,res){
+    console.log(req.body.email);
+    res.render('index');
+});
 
 app.get("/",function(req,res){
     res.render('index');

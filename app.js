@@ -1,6 +1,7 @@
 //jshint esversion:6
 
 const express = require("express");
+const path = require('path');
 
 const app = express();
 
@@ -23,6 +24,14 @@ app.get("/",function(req,res){
 app.get("/reservas", function(req,res){
     res.sendFile('index1.html', { root: path.join(__dirname, 'reservas.html') });
 });
+
+app.get("/reservas", function(req,res){
+    res.sendFile(path.join(__dirname, '/reservas.html'));
+});
+
+app.post("/reservas", function(req,res) {
+    console.log("yooyo");
+})
 
 app.get("/sobre", function(req, res){
     res.render("sobre");

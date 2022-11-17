@@ -17,8 +17,12 @@ app.get("/",function(req,res){
 });
 
 app.get("/reservas", function(req,res){
-    res.sendFile(path.join(__dirname, '/reservas/reservas.html'));
+    res.sendFile(path.join(__dirname, '/reservas.html'));
 });
+
+app.post("/reservas", function(req,res) {
+    console.log("yooyo");
+})
 
 app.get("/sobre", function(req, res){
     res.render("sobre");

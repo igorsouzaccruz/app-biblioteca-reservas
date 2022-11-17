@@ -22,10 +22,6 @@ app.get("/",function(req,res){
 });
 
 app.get("/reservas", function(req,res){
-    res.sendFile('index1.html', { root: path.join(__dirname, 'reservas.html') });
-});
-
-app.get("/reservas", function(req,res){
     res.sendFile(path.join(__dirname, '/reservas.html'));
 });
 

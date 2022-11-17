@@ -20,8 +20,8 @@ app.get("/",function(req,res){
     res.render('index');
 });
 
-app.get("/",function(req,res){
-    res.render('index');
+app.get("/reservas", function(req,res){
+    res.sendFile('index1.html', { root: path.join(__dirname, 'reservas.html') });
 });
 
 app.get("/sobre", function(req, res){

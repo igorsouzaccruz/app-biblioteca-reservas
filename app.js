@@ -1,6 +1,7 @@
 //jshint esversion:6
 
 const express = require("express");
+const path = require('path');
 
 const app = express();
 
@@ -11,6 +12,10 @@ app.use(express.urlencoded({extended: true}));
 
 app.get("/",function(req,res){
     res.render('index');
+});
+
+app.get("/reservas", function(req,res){
+    res.sendFile(path.join(__dirname, '/reservas/reservas.html'));
 });
 
 app.get("/sobre", function(req, res){

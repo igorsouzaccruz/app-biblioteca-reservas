@@ -26,7 +26,7 @@ app.get("/reservas", function(req,res){
 });
 
 app.post("/reservas", function(req,res) {
-    console.log("yooyo");
+    console.log("reservando...");
 })
 
 app.get("/sobre", function(req, res){
@@ -35,6 +35,10 @@ app.get("/sobre", function(req, res){
 
 app.get("/cadastro", function(req, res){
     res.render("cadastro");
+});
+
+app.post("/cadastro", function(req,res){
+    console.log("cadastrando...");
 });
 
 app.get("/FAQ", function(req, res){

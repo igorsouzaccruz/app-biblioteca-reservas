@@ -1,7 +1,7 @@
 {
   "name": "app-biblioteca-reservas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicativo com node/express de reservas de mesas na biblioteca",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js"

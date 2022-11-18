@@ -20,7 +20,7 @@ app.get("/sobre", function(req, res){
 });
 
 app.get("/cadastro", function(req, res){
-    res.render("cadastro");
+    console.log("feixao");
 });
 
 app.get("/FAQ", function(req, res){

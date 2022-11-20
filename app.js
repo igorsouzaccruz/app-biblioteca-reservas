@@ -6,6 +6,9 @@ const path = require('path');
 const app = express();
 
 const bodyParser = require('body-parser');
+const Reserva = require("./services/Reserva");
+const Usuario = require("./entities/Usuario");
+const Mesa = require("./entities/Mesa");
 
 app.set('view engine', 'ejs');
 
@@ -27,6 +30,10 @@ app.get("/reservas", function(req,res){
 
 app.post("/reservas", function(req,res) {
     console.log("reservando...");
+    const hoje = new Date();
+    const numeroMesa = req.body.n1;
+    reservaTeste = new Reserva(hoje,new Usuario("Igor","2111597","ADS","m",true),new Mesa(numeroMesa,true));
+    console.log(reservaTeste);
 })
 
 app.get("/sobre", function(req, res){

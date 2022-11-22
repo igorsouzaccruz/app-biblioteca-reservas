@@ -35,7 +35,8 @@ app.post("/", function(req,res){
 })
 
 app.get("/reservas", function(req,res){
-    res.sendFile(path.join(__dirname, '/reservas.html'));
+    // res.sendFile(path.join(__dirname, '/reservas.html'));
+    res.render("reservas");
 });
 
 app.post("/reservas", function(req,res) {
@@ -53,7 +54,6 @@ app.get("/confirmacao", function(req,res){
         matricula:reservaTeste.usuarioQueReservou.matricula,
         horaDaReserva:reservaTeste.horaDaReserva.getHours()
      })
-    
 });
 
 app.get("/sobre", function(req, res){

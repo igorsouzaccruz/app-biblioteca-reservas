@@ -11,23 +11,21 @@
 
     <div class="Reserva Principal">
         <ul class="tilesWrap">
-            <% for(var i=1; i<22; i++) { %>
+            <% for(var mesa=1; mesa<22; mesa++) { %>
                 <li>
                     <form action="/reservas" method="post">
-                         <h2> <%= i %></h2> 
-                        <h3>Assento <%= i %></h3>
-                        <% if(i%2){ %>
+                         <h2> <%= mesa %></h2> 
+                        <h3>Assento <%= mesa %></h3>
+                        <% if(mesa%2){ %>
                             <p>
                                 Para todos.
                             </p>
-                        } else {
+                        <% } else { %>
                             <p>
-                                Para todos.
+                                Preferencial.
                             </p>
-                        }
-
-                        
-                        <button name="n1" type="submit" name="reserva">Reserve aqui</button>
+                        <% } %>
+                        <button type="submit" name="reserva">Reserve aqui</button>
                     </form>
                 </li>
             <% } %>

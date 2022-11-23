@@ -23,7 +23,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 app.get("/",function(req,res){
-    
     res.render('index');
 });
 
@@ -41,8 +40,12 @@ app.get("/reservas", function(req,res){
 app.post("/reservas", function(req,res) {
     console.log("reservando...");
     const hoje = new Date();
+    // var mesa = req.body.mesa;
+    // var preferencial = req.body.preferencial;
+    // console.log(mesa); 
     reservaTeste = new Reserva(hoje,usuarioTeste,new Mesa("01",true));
     res.redirect("/confirmacao");
+    
 });
 
 app.get("/confirmacao", function(req,res){

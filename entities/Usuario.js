@@ -7,7 +7,7 @@ module.exports = class Usuario {
         this.genero = genero;
         this.isAdmin = isAdmin;
     }
-
+    
     toString(){
         return this.nome + " " + this.matricula + "\n" +
         this.curso + " " + " " + this.genero + " " + this.isAdmin;

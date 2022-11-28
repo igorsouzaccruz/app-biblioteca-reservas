@@ -20,11 +20,30 @@
     text-align: center;
     padding: 15px 15px 20px 40px;
   }
+  .maintitle2{
+    color:#ffffff;
+    text-align: center;
+    padding: 5px 15px 15px 40px;
+  }
 
-  .btn-access{
+  .btn-access1, .btn-access2{
     height: 30px;
-    width: 100px;
+    width: 120px;
     border-radius: 30px;
+    box-shadow: 1 1 1 1 rgba(#6e869c, .5);
+  }
+
+  .btn-access1:hover{
+    background-color: #00aced;
+    cursor: pointer;
+    border: 2px solid #79adce;
+    transition: 0.5s;
+  }
+  .btn-access2:hover{
+    background-color: #37b25e;
+    cursor: pointer;
+    border: 2px solid #077856;
+    transition: 0.5s;
   }
   
   .background {

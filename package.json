@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/igorsouzaccruz/app-biblioteca-reservas/issues"
   },
-  "homepage": "https://github.com/igorsouzaccruz/app-biblioteca-reservas#readme"
+  "homepage": "https://github.com/igorsouzaccruz/app-biblioteca-reservas#readme",
+  "devDependencies": {}
 }

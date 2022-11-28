@@ -27,12 +27,17 @@ app.get("/",function(req,res){
 });
 
 app.post("/", function(req,res){
-    console.log(req.body.email);
-    if(req.body.email===''){
-        res.redirect("/erroLogin")
-    } 
-    usuarioTeste = new Usuario("Igor","2111597","ADS","m",true);
-    res.redirect("/reservas")
+    if(req.body.acessar==='acessar'){
+        console.log(req.body.email);
+        if(req.body.email===''){
+            res.redirect("/erroLogin")
+        }
+        usuarioTeste = new Usuario("Igor","2111597","ADS","m",true);
+        res.redirect("/reservas")
+    }
+    if(req.body.cadastrar==='cadastrar'){
+        res.redirect("/cadastro")
+    }
 });
 
 app.get("/erroLogin", function(req,res){
@@ -75,7 +80,7 @@ app.get("/sobre", function(req, res){
 });
 
 app.get("/cadastro", function(req, res){
-    console.log("feixao");
+    res.render("cadastro");
 });
 
 app.post("/cadastro", function(req,res){

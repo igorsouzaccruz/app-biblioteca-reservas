@@ -32,8 +32,11 @@ app.post("/", function(req,res){
         if(req.body.email===''){
             res.redirect("/erroLogin")
         }
-        usuarioTeste = new Usuario("Igor","2111597","ADS","m",true);
-        res.redirect("/reservas")
+        if(req.body.senha===''){
+            res.redirect("/erroLogin")
+        }
+        //usuarioTeste = new Usuario("Igor","2111597","ADS","m",true);
+        //res.redirect("/reservas")
     }
     if(req.body.cadastrar==='cadastrar'){
         res.redirect("/cadastro")

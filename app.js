@@ -37,6 +37,20 @@ app.post("/", function(req,res){
         }
         //usuarioTeste = new Usuario("Igor","2111597","ADS","m",true);
         //res.redirect("/reservas")
+
+        if(req.body.email==='igor@unifor.com' ||  req.body.senha==='2111597'){
+            res.redirect("/reservas")
+        }
+        if(req.body.email==='lucas@unifor.com' ||  req.body.senha==='2215161'){
+            res.redirect("/reservas")
+        }
+        if(req.body.email==='emanuel@unifor.com' ||  req.body.senha==='1911035'){
+            res.redirect("/reservas")
+        }
+        if(req.body.email==='moacir@unifor.com' ||  req.body.senha==='2216387'){
+            res.redirect("/reservas")
+        }
+
     }
     if(req.body.cadastrar==='cadastrar'){
         res.redirect("/cadastro")

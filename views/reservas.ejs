@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="/css/reservas.css">
+    
+</head>
+<body>
+
+    <div class="Reserva Principal">
+        <ul class="tilesWrap">
+            <% for(var mesa=1; mesa<22; mesa++) { %>
+                <li>
+                    <form action="/reservas" method="post">
+                         <h2> <%= mesa %></h2> 
+                        <h3>Assento <%= mesa %></h3>
+                        <% if(mesa%2){ %>
+                            <p>
+                                Para todos.
+                            </p>
+                        <% } else { %>
+                            <p>
+                                Preferencial.
+                            </p>
+                        <% } %>
+                        <button type="submit" name="reserva" value="reserva">Reserve aqui</button>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <button class="logoutbtn" name="logout" value="logout" method="post">Logout</button>
+                </form>
+
+</body>
+</html>

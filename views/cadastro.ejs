@@ -1,5 +1,84 @@
 <%- include("header") -%>
 
-    <h1>Cadastro</h1>
+    <h1 class="maintitle">CADASTRO</h1>
+    <h2 class="maintitle2">Para se cadastrar no sistema, preencha as informações abaixo</h2>
+    <h2 class="maintitle2">Para dúvidas, se comunique conosco clicando aqui</h2>
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>Preencha seus</span>
+                  <span>dados</span>
+                </div>
+                <div class="app-contact">Informações : +62 81 314 928 595</div>
+              </div>
+              <div class="screen-body-item">
+                <form method="post">
+                  <div class="app-form">
+                    <div class="app-form-group">
+                      <input class="app-form-control" name="nome" placeholder="Nome completo" value="">
+                    </div>
+                    <div class="app-form-group">
+                      <input class="app-form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="app-form-group">
+                      <input class="app-form-control" name="matricula" placeholder="Matrícula com dígito">
+                    </div>
+                    <div class="app-form-group">
+                        <input class="app-form-control" name="gênero" placeholder="Gênero">
+                    </div>
+                    <div class="app-form-group">
+                        <input class="app-form-control" name="curso" placeholder="Curso">
+                    </div>
+                    <div class="app-form-group message">
+                      <input class="app-form-control" name="mensagem" placeholder="Definir senha">
+                      <input class="app-form-control" name="mensagem" placeholder="Confirme sua senha">
+                    </div>
+                    <div class="radioBTN maintitle2">
+                        <br>
+                        <h3>Tipo de usuário: </h3>
+                        <label class="radioC">Professor
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                        </label>
+                        <br>
+                        <label class="radioC">Funcionário
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                        </label>
+                        <br>
+                        <label class="radioC">Aluno
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="app-form-group buttons">
+                      <button type="submit" class="app-form-button">ENVIAR</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="credits">
+            &copy; Unifor 2022
+            </a>
+          </div>
+        </div>
+      </div>
     
 <%- include("footer") -%>

@@ -67,19 +67,35 @@ app.post("/erroLogin", function(req,res){
     res.redirect("/")
 });
 
+app.get("/cadastroSucesso", function(req,res){
+    res.render("cadastroSucesso")
+})
+
+app.post("/cadastroSucesso", function(req,res){
+    res.redirect("/")
+})
+
 app.get("/reservas", function(req,res){
     // res.sendFile(path.join(__dirname, '/reservas.html'));
     res.render("reservas");
 });
 
 app.post("/reservas", function(req,res) {
-    console.log("reservando...");
-    const hoje = new Date();
-    // var mesa = req.body.mesa;
-    // var preferencial = req.body.preferencial;
-    // console.log(mesa); 
-    reservaTeste = new Reserva(hoje,usuarioTeste,new Mesa("01",true));
-    res.redirect("/confirmacao");
+    console.log('1');
+    if(req.body.reserva==='reserva'){
+        console.log("reservando...");
+        const hoje = new Date();
+        // var mesa = req.body.mesa;
+        // var preferencial = req.body.preferencial;
+        // console.log(mesa); 
+        reservaTeste = new Reserva(hoje,usuarioTeste,new Mesa("01",true));
+        res.redirect("/confirmacao");
+    } 
+    if(req.body.logout==='logout'){
+        console.log("logou");
+        res.redirect("/")
+    }
+    
     
 });
 
@@ -101,8 +117,20 @@ app.get("/cadastro", function(req, res){
 });
 
 app.post("/cadastro", function(req,res){
-    console.log("cadastrando...");
+    if(req.body.nome !==''){
+        res.redirect("/cadastroSucesso")
+    } else {
+        res.redirect("/erroCadastro")
+    }
 });
+
+app.get("/erroCadastro", function(req,res){
+    res.render("erroCadastro")
+});
+
+app.post("/erroCadastro", function(req,res){
+    res.redirect("/cadastro")
+})
 
 app.get("/FAQ", function(req, res){
     res.render("FAQ");

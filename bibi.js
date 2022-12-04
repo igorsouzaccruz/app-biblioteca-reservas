@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const Reserva = require("./services/Reserva");
 const Usuario = require("./entities/Usuario");
 const Mesa = require("./entities/Mesa");
+const { builtinModules } = require("module");
 
 var usuarioTeste;
 var reservaTeste;
@@ -134,3 +135,5 @@ app.post("/fale-conosco", function(req, res){
 app.listen(process.env.port || 3000);
 
 console.log('Running at Port 3000');
+
+module.exports=bibi;

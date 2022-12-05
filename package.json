@@ -6,7 +6,6 @@
   "engines": {
     "node": "18.x"
   },
-
   "scripts": {
     "start": "node bibi.js",
     "dev": "nodemon app.js"

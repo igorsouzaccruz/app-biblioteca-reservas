@@ -100,10 +100,36 @@ app.get("/cadastro", function(req, res){
 });
 
 app.post("/cadastro", function(req,res){
-    if(req.body.nome !==''){
-        res.redirect("/cadastroSucesso")
-    } else {
+    
+    var erro = 0
+    if(req.body.nome == ''){
+        erro++
+    }
+    if(req.body.email == ''){
+        erro++
+    }
+    if(req.body.matricula == ''){
+        erro++
+    }
+    if(req.body.genero == ''){
+        erro++
+    }
+    if(req.body.curso == ''){
+        erro++
+    }
+    if(req.body.senha1 == ''){
+        erro++
+    }
+    if(req.body.senha2 == ''){
+        erro++
+    }
+    if(req.body.senha1 !== req.body.senha2){
+        erro++
+    }
+    if(erro > 0){
         res.redirect("/erroCadastro")
+    } else {
+        res.redirect("/cadastroSucesso")
     }
 });
 

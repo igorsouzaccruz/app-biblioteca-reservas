@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 app.get("/",function(req,res){
-    res.sendFile('public/index.html');
+    res.render("index");
 });
 
 app.post("/", function(req,res){

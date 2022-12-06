@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const Reserva = require("./services/Reserva");
 const Usuario = require("./entities/Usuario");
 const Mesa = require("./entities/Mesa");
+const { builtinModules } = require("module");
 
 var usuarioTeste;
 var reservaTeste;
@@ -23,7 +24,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 app.get("/",function(req,res){
-    res.render('index');
+    res.sendFile('public/index.html');
 });
 
 app.post("/", function(req,res){
@@ -151,3 +152,5 @@ app.post("/fale-conosco", function(req, res){
 app.listen(process.env.port || 3000);
 
 console.log('Running at Port 3000');
+
+module.exports=app;

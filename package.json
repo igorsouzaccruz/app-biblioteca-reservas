@@ -2,13 +2,13 @@
   "name": "app-biblioteca-reservas",
   "version": "1.0.0",
   "description": "Aplicativo com node/express de reservas de mesas na biblioteca",
-  "main": "bibi.js",
+  "main": "app.js",
   "engines": {
     "node": "18.x"
   },
 
   "scripts": {
-    "start": "node bibi.js",
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "author": "",

@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 app.get("/",function(req,res){
-    res.sendFile('public/index.html');
+    res.render("index");
 });
 
 app.post("/", function(req,res){
@@ -149,8 +149,11 @@ app.post("/fale-conosco", function(req, res){
     res.render("fale-conosco")
 });
 
-app.listen(process.env.port || 3000);
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
-console.log('Running at Port 3000');
-
-module.exports=app;
+app.listen(port, function(){
+    console.log("Server has started");
+});

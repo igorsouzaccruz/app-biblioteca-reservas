@@ -108,6 +108,14 @@ app.post("/cadastro", function(req,res){
     }
 });
 
+app.delete("/cadastro", function(req,res){
+    console.log("deletando cadastro...");
+});
+
+app.put("/cadastro", function(req,res){
+    console.log("atualizando cadastro...");
+});
+
 app.get("/erroCadastro", function(req,res){
     res.render("erroCadastro")
 });

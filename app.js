@@ -39,6 +39,7 @@ app.post("/", function(req,res){
         //usuarioTeste = new Usuario("Igor","2111597","ADS","m",true);
         //res.redirect("/reservas")
 
+
         if(req.body.email==='igor@unifor.com' ||  req.body.senha==='2111597'){
             usuarioTeste = new Usuario("Igor Souza","2111597","ADS","m",true);
             res.redirect("/reservas")
@@ -57,6 +58,7 @@ app.post("/", function(req,res){
         }
 
     }
+    
     if(req.body.cadastrar==='cadastrar'){
         res.redirect("/cadastro")
     }

@@ -39,26 +39,27 @@ app.post("/", function(req,res){
         //usuarioTeste = new Usuario("Igor","2111597","ADS","m",true);
         //res.redirect("/reservas")
 
-
-        if(req.body.email==='igor@unifor.com' ||  req.body.senha==='2111597'){
+        
+        if(req.body.email==='igor@unifor.com' &&  req.body.senha==='2111597'){
             usuarioTeste = new Usuario("Igor Souza","2111597","ADS","m",true);
             res.redirect("/reservas")
         }
-        if(req.body.email==='lucas@unifor.com' ||  req.body.senha==='2215161'){
+        if(req.body.email==='lucas@unifor.com' &&  req.body.senha==='2215161'){
             usuarioTeste = new Usuario("Lucas Araújo","2215161","ADS","m",true);
             res.redirect("/reservas")
         }
-        if(req.body.email==='emanuel@unifor.com' ||  req.body.senha==='1911035'){
+        if(req.body.email==='emanuel@unifor.com' &&  req.body.senha==='1911035'){
             usuarioTeste = new Usuario("Emanuel Costa","1911035","ADS","m",true);
             res.redirect("/reservas")
         }
-        if(req.body.email==='moacir@unifor.com' ||  req.body.senha==='2216387'){
+        if(req.body.email==='moacir@unifor.com' &&  req.body.senha==='2216387'){
             usuarioTeste = new Usuario("Moacir Carlos","2216387","ADS","m",true);
             res.redirect("/reservas")
         }
 
+
     }
-    
+
     if(req.body.cadastrar==='cadastrar'){
         res.redirect("/cadastro")
     }

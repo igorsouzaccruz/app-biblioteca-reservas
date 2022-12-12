@@ -1,6 +1,7 @@
 module.exports = class Mesa {
 
-    constructor(numero,isPreferencial){
+    constructor(id,numero,isPreferencial){
+        this.id = id;
         this.numero = numero;
         this.preferencial = isPreferencial;
     }

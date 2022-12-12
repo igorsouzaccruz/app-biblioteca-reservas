@@ -1,6 +1,7 @@
 //jshint esversion:6
 
 const express = require("express");
+const mongoose = require("mongoose");
 const path = require('path');
 
 const app = express();
@@ -16,12 +17,26 @@ var reservaTeste;
 
 app.set('view engine', 'ejs');
 
+mongoose.set("strictQuery", true);
+
 app.use(express.static("public"));
 
 app.use(express.urlencoded({extended: true}));
 
 app.use(bodyParser.urlencoded({extended:true}))
 
+// const Person = require('/repositories/UserRepository')
+
+const DB_USER = "admin-igor"
+const DB_PASSWORD = encodeURIComponent("HToICQGihIOCekFH")
+
+mongoose.connect(
+    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.z1pllb0.mongodb.net/bibliotecaDB?retryWrites=true&w=majority`
+    )
+.then(() => {
+    console.log("Connctamos ao MongoDB");
+})
+.catch((err) => console.log(err));
 
 app.get("/",function(req,res){
     res.render("index");
@@ -130,6 +145,14 @@ app.post("/cadastro", function(req,res){
     } else {
         res.redirect("/erroCadastro")
     }
+});
+
+app.delete("/cadastro", function(req,res){
+    console.log("deletando cadastro...");
+});
+
+app.put("/cadastro", function(req,res){
+    console.log("atualizando cadastro...");
 });
 
 app.get("/erroCadastro", function(req,res){

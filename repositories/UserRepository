@@ -1,5 +1,11 @@
 const mongoose = require("mongoose");
 
-async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/bibliotecaDB');
-  }
+
+const Usuario = mongoose.model('Usuario', {
+  _id:String,
+  name:String,
+  matricula:Number,
+  curso:Number,
+});
+
+module.exports = Usuario;
